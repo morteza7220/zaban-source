@@ -1,0 +1,289 @@
+@import './base.css';
+
+@font-face {
+  font-family: 'sarabum';
+  src: url('fonts/Sarabun-SemiBold.eot'),
+       url('fonts/Sarabun-SemiBold.woff2') format('woff2'),
+       url('fonts/Sarabun-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Vazir-Black';
+  src: url('fonts/Vazir-Black.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Vazir-Thin';
+  src: url('fonts/Vazir-Thin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Vazir-Medium';
+  src: url('fonts/Vazir-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'BZar';
+  src: url('fonts/BZar.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BBaran';
+  src: url('fonts/BBaran.woff') format('woff');
+}
+@font-face {
+  font-family: 'BFantezy';
+  src: url('fonts/BFantezy.woff') format('woff');
+}
+@font-face {
+  font-family: 'BFerdosi';
+  src: url('fonts/BFerdosi.woff') format('woff');
+}
+@font-face {
+  font-family: 'BHoma';
+  src: url('fonts/BHoma.woff') format('woff');
+}
+@font-face {
+  font-family: 'BJadidBold';
+  src: url('fonts/BJadidBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'BLotus';
+  src: url('fonts/BLotus.woff') format('woff');
+}
+@font-face {
+  font-family: 'BShiraz';
+  src: url('fonts/BShiraz.woff') format('woff');
+}
+@font-face {
+  font-family: 'BNarm';
+  src: url('fonts/BNarm.woff') format('woff');
+}
+@font-face {
+  font-family: 'BNazanin';
+  src: url('fonts/BNazanin.woff') format('woff');
+}
+@font-face {
+  font-family: 'BNasimBold';
+  src: url('fonts/BNasimBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'BTitrBold';
+  src: url('fonts/BTitrBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'BTitrTGEBold';
+  src: url('fonts/BTitrTGEBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'madeleine';
+  src: url('fonts/Madeleine Bold.eot'),
+       url('fonts/Madeleine Bold.woff2') format('woff2'),
+       url('fonts/Madeleine Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'anggun';
+  src: url('fonts/Anggun Sans.eot'),
+       url('fonts/Anggun Sans.woff2') format('woff2'),
+       url('fonts/Anggun Sans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'muktab';
+  src: url('fonts/Mukta-Bold.eot'),
+       url('fonts/Mukta-Bold.woff2') format('woff2'),
+       url('fonts/Mukta-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'muktaeb';
+  src: url('fonts/Mukta-ExtraBold.oft'),
+       url('fonts/Mukta-ExtraBold.woff2') format('woff2'),
+       url('fonts/Mukta-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Andikab';
+  src: url('fonts/Andika-Bold.eot'),
+       url('fonts/Andika-Bold.woff2') format('woff2'),
+       url('fonts/Andika-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lobster';
+  src: url('fonts/Lobster-Regular.eot'),
+       url('fonts/Lobster-Regular.woff2') format('woff2'),
+       url('fonts/Lobster-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BalsamiqSansb';
+  src: url('fonts/BalsamiqSans-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FredokaOne';
+  src: url('fonts/FredokaOne-Regular.eot'),
+       url('fonts/FredokaOne-Regular.woff2') format('woff2'),
+       url('fonts/FredokaOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ArchivoBlack';
+  src: url('fonts/ArchivoBlack-Regular.eot'),
+       url('fonts/ArchivoBlack-Regular.woff2') format('woff2'),
+       url('fonts/ArchivoBlack-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CrimsonText';
+  src: url('fonts/CrimsonText-Bold.eot'),
+       url('fonts/CrimsonText-Bold.woff2') format('woff2'),
+       url('fonts/CrimsonText-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*----------------------------------------------------*/
+@font-face {
+  font-family: 'Pacifico';    /*great fantesy font*/
+  src: url('fonts/Pacifico-Regular.eot'),
+       url('fonts/Pacifico-Regular.woff2') format('woff2'),
+       url('fonts/Pacifico-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*----------------------------------------------------*/
+@font-face {    
+  font-family: 'Righteous';
+  src: url('fonts/Righteous-Regular.eot'),
+       url('fonts/Righteous-Regular.woff2') format('woff2'),
+       url('fonts/Righteous-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lobster';
+  src: url('fonts/Lobster-Regular.eot'),
+       url('fonts/Lobster-Regular.woff2') format('woff2'),
+       url('fonts/Lobster-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sarabum';
+  src: url('fonts/Sarabun-SemiBold.eot'),
+       url('fonts/Sarabun-SemiBold.woff2') format('woff2'),
+       url('fonts/Sarabun-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'skarpah';
+  src: url('fonts/Skarpa Hollow Regular 2.0.eot'),
+       url('fonts/Skarpa Hollow Regular 2.0.woff2') format('woff2'),
+       url('fonts/Skarpa Hollow Regular 2.0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'skarpa';
+  src: url('fonts/Skarpa.eot'),
+       url('fonts/Skarpa.woff') format('woff'),
+       url('fonts/Skarpa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'samim';
+  src: url('fonts/Samim.woff') format('woff'),
+        url('fonts/Samim.eot') format('eot');
+}
+
+@font-face {
+  font-family: 'iranb';
+  src: url('fonts/IRANSans_Bold.woff'),
+       url('fonts/IRANSans_Bold.woff') format('woff'),
+       url('fonts/IRANSans_Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'samim';
+  src: url('fonts/Samim.eot'),
+       url('fonts/Samim.woff') format('woff'),
+       url('fonts/Samim.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'samim';
+  src: url('fonts/Samim.eot'),
+       url('fonts/Samim.woff') format('woff'),
+       url('fonts/Samim.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'InterEB';
+  src: url('fonts/Inter-ExtraBold.eot'),
+       url('fonts/Inter-ExtraBold.woff') format('woff'),
+       url('fonts/Inter-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*@font-face {
+  font-family: 'samim';
+  src: url('fonts/Samin.eot'),
+       url('fonts/Samin.woff') format('woff'),
+       url('fonts/Samin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: <name_u_choose>;
+    src: url('~assets/fonts/<static_font_file>.ttf');
+}
+*/
+/*#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}*/

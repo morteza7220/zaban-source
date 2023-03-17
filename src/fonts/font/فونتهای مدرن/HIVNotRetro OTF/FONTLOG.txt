@@ -1,0 +1,41 @@
+FONTLOG for the HIVNotRetro font
+
+This file provides detailed information on the HIVNotRetro Font Software.
+This information should be distributed along with the HIVNotRetro fonts
+and any derivative works.
+
+Basic Font Information
+
+HIVNotRetro is a decorative Unicode typeface family that supports
+most languages that use the Latin script and its variants, and could 
+be expanded to support other scripts.
+
+The following ranges are partially supported in this release
+	Basic Latin (U+0000-007F)
+	Latin-1 Supplement (U+0080-00FF)
+	Latin Extended-A (U+0100-017F)
+	Latin Extended-B (U+0180-024F)
+	Latin Extended Additional (U+1E00-1EFF)
+	General Punctuation (U+2000-206F)
+	Superscripts and Subscripts (U+2070-209F)
+	Currency Symbols (U+20A0-20CF)
+	Number Forms (U+2150-218F)
+	Latin Extended-D (U+A720-A7FF)
+
+
+ChangeLog
+
+29 Nov 2016 (Feòrag) HIVNotRetro Version 1.0
+- Initial release
+
+Acknowledgements
+
+If you make modifications be sure to add your name (N), email (E), web-address
+(if you have one) (W) and description (D). This list is in alphabetical order.
+
+N: Feòrag
+E: 
+W: http://www.feorag.com/
+D: Designer - original Roman glyphs
+
+Feòrag is a hobbyist font designer.

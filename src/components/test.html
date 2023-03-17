@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+
+
+
+</head>
+<body >
+	<div id="clickable">
+		
+i am i'm example text or in i and when you
+click <br> mer can see the dirr of pass br <br>
+m example text or in i and when you <br>m example text or in i and when you
+	</div>
+
+
+	  <div id="div" style="padding: 10px;border: 3px solid blue">DIV
+		  <p id="p" style="padding: 10px;border: 3px solid blue">P</p>
+	  </div>
+
+
+<script type="text/javascript">
+	 document.getElementById("clickable").click(function(e) {
+	  s = window.getSelection();
+	  var range = s.getRangeAt(0);
+	  var node = s.anchorNode;
+	  while (range.toString().indexOf(' ') != 0) {
+	    range.setStart(node, (range.startOffset - 1));
+	  }
+	  range.setStart(node, range.startOffset + 1);
+	  do {
+	    range.setEnd(node, range.endOffset + 1);
+
+	  }
+	  while (range.toString().indexOf(' ') == -1 && range.toString().trim() != '');
+	  var str = range.toString().trim();
+	  //alert(str);
+	});	
+
+
+</script>
+</body>
+</html>
