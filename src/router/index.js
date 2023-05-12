@@ -8,6 +8,13 @@ import challengeIndex from  '../components/challenge/challengeIndex.vue';
 import Bodykeep from  '../components/articles/Bodykeep.vue';
 import Autism  from  '../components/articles/Autism.vue';
 import challengeHome from '../components/challenge/challengeHome.vue';
+import mental from '../components/articles/mental.vue';
+import addic04 from '../components/articles/addic04.vue';
+import addic03 from '../components/articles/addic03.vue';
+import addic02 from '../components/articles/addic02.vue';
+import addic01 from '../components/articles/addic01.vue';
+import adictionIndex from '../components/articles/adictionIndex.vue';
+
 import EricFroom from '../components/articles/EricFroom.vue';
 import beting from '../components/articles/beting.vue';
 import login from '../components/auth/login.vue';
@@ -15,7 +22,7 @@ import IntroBook from '../components/blog/IntroBook.vue';
 import BlogIndex from '../components/blog/BlogIndex.vue';
 import startIndex from '../components/match/startIndex.vue';
 
-import hafezIndex from '../components/hafez/index.vue';
+import hafezIndex from '../components/hafez/hafezIndex.vue';
 
 import Paye7Index from    '../components/zaban/paye7/Paye7Index.vue';
     import Paye70Index from   '../components/zaban/paye7/dars0/Paye70Index.vue';
@@ -321,14 +328,20 @@ const router = createRouter({
 
      {path: '/paye113index',name: 'paye113index',component: Paye113Index},
          {path: '/paye113context',name: 'paye113context',component: Paye113Context},
+{path: '/addic04',name: 'addic04', component: addic04 },
          {path: '/paye113word',name: 'paye113Word',component: Paye113Word},
+{path: '/addic03',name: 'addic03', component: addic03 },
          {path: '/paye12index',name: 'paye12index',component: Paye12Index},
+{path: '/mental',name: 'mental', component: mental },
 
+{path: '/addic02',name: 'addic02', component: addic02 },
          {path: '/paye121index',name: 'paye121index',component: Paye121Index},
          {path: '/paye121context',name: 'paye121context',component: Paye121Context},
          {path: '/paye121word',name: 'paye121Word',component: Paye121Word},
 
          {path: '/paye122index',name: 'paye122index',component: Paye122Index},
+{path: '/addic01',name: 'addic01', component: addic01 },
+{path: '/adictionIndex',name: 'adictionIndex', component: adictionIndex },
          {path: '/paye122context',name: 'paye122context',component: Paye122Context},
          {path: '/paye122word',name: 'paye122Word',component: Paye122Word},
          {path: '/paye123index',name: 'paye123index',component: Paye123Index},

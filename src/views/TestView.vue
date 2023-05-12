@@ -18,7 +18,7 @@
 		formData.append('username',form.username);
 		formData.append('password', form.password);
 		axios.post('http://localhost:8000/zaban/signup', formData).then((a)=>{	
-		console.log(a.data);
+			console.log(a.data);
 			if (a.data.is_done==100) {
 				go_to_page_mori();
 			} 

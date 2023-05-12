@@ -531,7 +531,7 @@ export const useMori = defineStore('mori', () => {
 			"what\'s he like":"چه جور آدمی هست",
 			"clever":"باهوش",
 			"kind":"مهربان",
-			"hard-working":"پرتلاش",
+			"hard-working":"پرتلاش-سخ تکوش",
 			"hard":"سخت",
 			"always":"همیشه",
 			"helpful":"مفید",

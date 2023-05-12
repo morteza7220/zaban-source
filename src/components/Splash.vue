@@ -9,7 +9,7 @@ const react=reactive({
   		id:0,
   		poem:''
 });
-react.id=Math.ceil(Math.random()*3);
+react.id=Math.floor(Math.random()*arr.length);
 console.log(react.id); 
 // id.value=Math.ceil(Math.random()*3);
 
@@ -22,13 +22,15 @@ onMounted(()=>{
 
 
 <template>
-<div class="p-4 text-center w-full" style="background-color: lightblue;font-family: iranb;">
+<div class="p-4 text-center w-full bg-red-300" style="background-color: lightblue;font-family: iranb;">
 	<div class="flex flex-col justify-around h-[90vh] overflow-scroll">
 			<p style="font-size: 5vw;">طراح و برنامه نویس: مرتضی شبانی پور</p>
 			<p style="font-size: 3vw;" class="px-8 text-justify" dir="rtl">
-	برای مشاهده کامل این اپلیکیشن  از مرورگر  موبایل استفاده کنید <br> 
-	در بروزرسانی هایی بعدی فایل های css نمایشگر های عریض اضافه خواهد شد...
+	برای مشاهده  این اپلیکیشن  از مرورگر  موبایل استفاده کنید <br> 
+
+		<p class="text-[3vw]">متاسفانه الان وقت آزاد برای آپدیت سایت رو ندارم ولی قول یک آپدیت جدی رو &nbsp; <span class="bg-blue-300 text-[4vw] bg-gray-700 text-gray-300">&nbsp;&nbsp;اوایل اردیبهشت &nbsp;&nbsp;</span> &nbsp;میدم
 			</p>
+		</p>
 
 	<RouterLink to="/zabanindex" >
 			<p style="font-family: iranb" class="bg-green-800 text-white p-2 py-4">ورود به بخش زبان</p>

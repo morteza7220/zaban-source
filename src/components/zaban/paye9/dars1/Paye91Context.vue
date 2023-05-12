@@ -1,110 +1,179 @@
 <script setup>
-import {ref, onMounted} from 'vue';
-
-const slider=ref(null);		//div
-const def_in_slider=ref('');	//string
-
-const text_def_switch=ref(true);	
-function switch_text_def(){
-	text_def_switch.value=!text_def_switch.value;
-	console.log(text_def_switch.value); 
-	if (text_def_switch.value==true) {
-		help();
-	}
-}	
-// ___________________________________________________________
-
-import {useMori} from '@/stores/mori';
-import {storeToRefs} from 'pinia';
-const store = useMori();
-const {context_7} = store;		//dict
-
-// ___________________________________________________________
-// ___________________________________________________________
-
-function help(){
-		def_in_slider.value ="برای مشاهده معنی کلمات را انتخاب کنید";
-		slider.value.style.top='60vh';
-}
-setTimeout(help,1000);
-
-	 
-function goDown(){
-		slider.value.style.top='110vh';
-}
-
-document.onselectionchange=function(){
-		// get selection and trim 
-		const selected_word=document.getSelection().getRangeAt(0);
-		const trim_word=selected_word.toString().toLowerCase().trim();
-		def_in_slider.value =context_7[trim_word];
-		//popup go up 
-		if (slider.value!==null) {
-			slider.value.style.top='60vh';
-			//if the selection length is bellow 1 the popup goes down
-			if(trim_word.length<1){
-				console.log(trim_word.length);
-				go4Down(); 
-			}
-		}
-}		 
-function go4Down(){
-		slider.value.style.top='110vh';
-}
-
+import {ref,onMounted} from 'vue'
+function go(event){
+        event.target.parentNode.classList.toggle('flipped');
+        }
+const words=[
+// "an angry kid","یک بچه عصبانی"
+// "a brave soldier","یک سرباز شجاع"
+// "a careless man","یک مرد بی احتیاط"
+// "a cruel boy","یک پسر بی رحم"
+// "a funny story ","یک داستان جالب"
+// "a neat person","یک شخص مرتب"
+// "a nervous boy ","یک پسر نگران"
+// "a quiet place","یک مکان آرام"
+// "a rude kid ","یک بچه بی ادب"
+// "a selfish person","یک شخص خودخواه"
+// "a hard-working worker","یک کارگر سخت کوش"
+// "a lazy person ","یک شخص تنبل"
+// "a shy girl","یک دختر خجالتی"
+// "a generous girl","یک دختر بخشنده-سخاوتمند"
+"poem",
+"horse riding",
+"reading",
+"What do you like to do in your free time?",
+"playing computer games",
+"sometimes",
+"What’s your hobby?",
+"What sort of things do you read?",
+"Do you have any hobbies?",
+"watching movies",
+"walking in the park",
+"magazine",
+"sports news",
+"What do you do as a hobby?",
+"usually",
+"I watch movies as a hobby.",
+"playing tennis",
+"search",
+"skiing",
+"listening to the radio",
+"fishing",
+"Net",
+"Do you like reading?",
+"I don’t have any hobbies.",
+"shopping",
+"hobby",
+"free time",
+"going to the movies",
+"I love reading.",
+"working in the garden",
+"enjoy",
+"browsing the internet",
+"I usually go to the gym in my free time.",
+"What do you do in your free time?",
+"fire service",
+];
+        
+const defs=[
+" شعر",
+" اسب سواری",
+" مطالعه",
+" دوست دارید در اوقات فراغت خود چه کاری کنید؟",
+" بازی کامپیوتری بازی کردن",
+" گاهی",
+" سرگرمی شما چیست؟",
+" چه جور چیزهایی میخوانی؟",
+" آیا هیچ سرگرمی ای داری؟",
+" فیلم تماشا کردن",
+" قدم زدن در پارک",
+" مجله",
+" خبر ورزشی",
+" برای سرگرمی چه کاری انجام می دهی؟",
+" معمولاً",
+" من به عنوان سرگرمی تلویزیون تماشا می کنم.",
+" تنیس بازی کردن",
+" جستجو کردن",
+" اسکی",
+" گوش دادن به رادیو",
+" ماهی گیری",
+" اینترنت",
+" مطالعه کردن را دوست داری؟",
+" من هیچ سرگرمی ای ندارم.",
+" خرید",
+" سرگرمی",
+" وقت آزاد",
+" رفتن به سینما",
+" من عاشق مطالعه هستم.",
+" در باغ کار کردن",
+" لذت بردن",
+" در اینترنت گشت زدن",
+" من معمولا در وقت آزادم به باشگاه می روم.",
+" در اوقات فراغت خود چه می کنید؟",
+" سازمان آتش‌نشانی",
+];
+console.log(defs,words);
+// const arr_front=[0,1,2,5,6,11,17,22,23,28,29,33,34,46,50];
+const arr_front=[0];
+// const arr_back=[2,5,6,11,17,22,23,28,29,33,34,46,50];
+const arr_back=[0];
 </script>
+
 <template>
+<!-- <div class="overflow-scroll bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"> -->
+<div class="overflow-scroll bg-gradient-to-tl from-sky-400 via-cyan-300 to-slate-100">
 
-<p @click="switch_text_def()" class="bg-green-600 shadow text-center w-[40vw] ml-[50vw] mt-3 py-1 mx-1  text-white" style="font-family: iranb">معنی درس</p>
+    <div class="cont w-[94vw]  pt-10 overflow-scroll flex flex-wrap flex-row-reverse justify-around h-[65vh]
+   mx-auto gap-3">
+  
+    <div v-for="(item,index) in words"
+         class="cards" 
+         @click="go($event)">
+          <!-- front -->
+        <div class="card front text-black pt-[2vh]" v-if="!arr_front.includes(index)">{{item}}</div>    
+        <div class="card front text-black pt-[2vh]" v-else>{{item}}</div>
 
-<p class="p-2 leading-8 overflow-scroll  h-[70vh]" 
-	:class="{'text-right': !text_def_switch}" 
-	style="font-family: BalsamiqSansb; font-size: 5vw; z-index: 99">
+          <!-- .back -->
+        <div class="car.back text-black bg-blue-900 text-white pt-[2vh]" v-if="!arr_back.includes(index)">{{defs[index]}}</div>
+        <div  class="car.back text-black pt-[2vh]" v-else>{{defs[index]}}</div>
+</div>
 
-<pre style="font-family: BalsamiqSansb; " v-show="text_def_switch" 
-class="overflow-scroll">
-Ehsan: Who is your best friend at school?
-Parham: Reza.
-Ehsan: What’s he like?
-Parham: Oh, he is really great! He’s clever and kind.
-Ehsan: Is he hard-working too?
-Parham: Yes! And he’s always very helpful.
-Ehsan: How?
-Parham: He always helps me
-with my lessons.
-</pre>
-
-<pre style="font-family: iranb ;font-size: 4vw;" dir="rtl" v-show="!text_def_switch"
-class="overflow-scroll">
-احسان: بهترین دوستت توی مدرسه کیه؟
-پرهام: رضا.
-احسان: او چه جور (آدمی) هست؟
-پرهام: اره, او واقعا عالیه. او باهوش و مهربان هست.
-احسان: او سخت کوش هم هست؟
-پرهام: بله. و همیشه خیلی کمک حال (بقیه) هست.
-احسان: چطور (مگه)؟
-پرهام: او همیشه توی درس هام بهم کمک می کنه.
-
-</pre>	
-</p>
-
-<!-- --------------------slider for translation ---------------------->
-<div ref="slider" 
-	 class="fixed top-[110vh] w-[100vw] h-[10vh] bg-gradient-to-bl from-indigo-900 via-indigo-600 to-violet-900
-				transition-all duration-10000  bg-gray-700 text-2xl flex justify-center text-white pt-[2vh] z-[100]"
-	style="transition-duration: 1s; font-family: iranb;font-size: 5vw;">	
-			{{def_in_slider}}
-</div>	
-<!-- -------------------------------------------------------------- -->
-
-
-
-
-
+</div>
+<!-- <div class="animm h-[30vh] w-[100vw]" style="z-index:2">i am anim</div> -->
 <RouterLink to="/paye7index">
-      <img class="h-[5vh] w-[10vw] fixed bottom-10 right-0" style="z-index: 99" src="@/assets/back-arrow.png" />
+      <!-- <div class="h-[30vh] w-[100vw] text-center bg-yellow-300" >بازگشت</div> -->
+      <img class="h-[5vh] w-[10vw] fixed bottom-30 right-1" src="@/assets/back-arrow.png" />
 </RouterLink> <br>
+</div>
 </template>
+
 <style scoped>
+.cont {
+  perspective: 1400px;
+}
+.cards {
+  position: relative;
+  width:40vw;
+  height: 25vw;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  transition: transform 1s;
+}
+
+.flipped {
+  transform: rotateY(-180deg);
+}
+
+.card {
+  background-color: black;
+  background-image: url(@/assets/back1.jpg);
+  background-size: 100%;
+  background-position: center center;
+  color: black;
+  position: absolute;
+
+  line-height: 30vw;
+  color: black;
+  font-size: 13px;
+  text-align: center;
+  backface-visibility: hidden;
+  box-shadow: 1px 1px 5px 1px black;
+}
+
+.front {
+  padding-top: 4vh;
+  color: black;
+  font-family: BalsamiqSansb;
+  line-height: 2vh;
+}
+
+.back {
+  /*color: blue;*/
+  transform: rotateY(180deg);
+  font-family: iranb;
+  line-height: 2vh;
+  padding-top: 4vh;
+}
 
 </style>

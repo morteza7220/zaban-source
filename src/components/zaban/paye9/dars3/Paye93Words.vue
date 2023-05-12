@@ -4,6 +4,21 @@ function go(event){
         event.target.parentNode.classList.toggle('flipped');
         }
 const words=[
+// "make lunch/dinner"
+// "bake a cake"
+// "set the table"
+// "sing the national anthem"
+// "hold a ceremony"
+// "clear the table"
+// "watch fireworks"
+// "read poems of Hafez"
+// "wear special clothes"
+// "go out on Nature Day"
+// "celebrate a religious holiday"
+// "watch military parade"
+// "commemorate NE martyrs"
+// "Islamic-Iranian culture"
+// "Islamic revolution anniversary"
 "holiday",
 "Do you and your cousins set the Haft Seen table?",
 "celebrate a religious holiday",
@@ -138,9 +153,9 @@ const arr_back=[0];
         <div class="card front text-black pt-[2vh]" v-if="!arr_front.includes(index)">{{item}}</div>    
         <div class="card front text-black pt-[2vh]" v-else>{{item}}</div>
 
-          <!-- back -->
-        <div class="card back text-black bg-blue-900 text-white pt-[2vh]" v-if="!arr_back.includes(index)">{{defs[index]}}</div>
-        <div  class="card back text-black pt-[2vh]" v-else>{{defs[index]}}</div>
+          <!-- .back -->
+        <div class="car.back text-black bg-blue-900 text-white pt-[2vh]" v-if="!arr_back.includes(index)">{{defs[index]}}</div>
+        <div  class="car.back text-black pt-[2vh]" v-else>{{defs[index]}}</div>
 </div>
 
 </div>
