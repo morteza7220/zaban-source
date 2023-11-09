@@ -1,0 +1,12 @@
+*/*
+!src/
+!postcss.config.js
+!tailwind.config.js
+!package.json
+!package_lock.json
+71
+10reading
+*.zip
+text/
+!*.sh
+

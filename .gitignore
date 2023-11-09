@@ -1,0 +1,14 @@
+*/*
+*.zip
+test/
+10reading
+71
+
+!src/
+!postcss.config.js
+!tailwind.config.js
+!package.json
+!package_lock.json
+
+!*.sh
+!vite.config.js
